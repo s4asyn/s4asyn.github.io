@@ -1,0 +1,36 @@
+// eslint eslint-config-airbnb eslint-plugin-import
+// eslint-config-prettier eslint-plugin-prettier
+{
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "plugins": ["import", "react", "prettier"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "prettier",
+    "plugin:prettier/recommended",
+    "airbnb-base"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "rules": {
+    "indent": 4,
+    "prettier/prettier": "error",
+    "react/display-name": "off",
+    "no-eval": "error",
+    "no-var": "error",
+    "no-implied-eval": "error",
+    "strict": "off"
+  }
+}
