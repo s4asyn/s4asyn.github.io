@@ -8,11 +8,9 @@ export default () => (
     <Container maxWidth="sm">
         <Box my={4}>
             <Typography variant="h4" component="h1" gutterBottom>
-                Hello World!
+                Gatsby v4-beta example
             </Typography>
-            <Link to="/about" color="secondary">
-                Go to the about page
-            </Link>
+            <Link to="/">Go to the main page</Link>
         </Box>
     </Container>
 );
