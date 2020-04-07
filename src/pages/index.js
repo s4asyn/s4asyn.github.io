@@ -1,3 +1,4 @@
 import React from 'react';
+import { Layout } from '../components';
 
-export default () => <div className="font-bold">Hello world!</div>;
+export default () => <Layout>Hello world!</Layout>;

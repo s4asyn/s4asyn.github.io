@@ -1,0 +1,30 @@
+{
+    "S4 Component index.js": {
+        "prefix": ["s4comindex"],
+        "body": ["import $1 from './$2';", "", "export default $1;", "$0"],
+        "description": "A Component index.js"
+    },
+    "S4 Component With only children": {
+        "prefix": ["s4comchild"],
+        "body": [
+            "import React, { Children } from 'react';",
+            "import PropTypes from 'prop-types';",
+            "/* import Subcomponent */",
+            "",
+            "/* import Style*/",
+            "import $1Style from './$2.module.css';",
+            "",
+            "const $1 = ({ children }) => (",
+            "    <div className={$1Style.$0}>{children}</div>",
+            ");",
+            "",
+            "$1.PropTypes = {",
+            "    children: PropTypes.node.isRequired,",
+            "};",
+            "",
+            "export default $1;",
+            ""
+        ],
+        "description": "A Component"
+    }
+}
