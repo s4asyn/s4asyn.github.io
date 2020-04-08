@@ -1,7 +1,13 @@
-// See https://tailwindcss.com/docs/configuration for details
 module.exports = {
     theme: {},
-    variants: {},
-    // https://github.com/tailwindcss/custom-forms
-    plugins: [require('@tailwindcss/custom-forms')],
+    variants: {
+        float: ['responsive', 'direction'],
+        margin: ['responsive', 'direction'],
+        padding: ['responsive', 'direction'],
+    },
+    plugins: [
+        require('@tailwindcss/custom-forms'),
+        require('tailwindcss-logical'),
+        require('tailwindcss-dir')(),
+    ],
 };

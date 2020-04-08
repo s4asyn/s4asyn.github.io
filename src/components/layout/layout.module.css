@@ -1,3 +1,13 @@
 .container {
+    @apply pis-10;
+}
+
+[dir='ltr'] .container {
     @apply bg-yellow-500;
+    /* @apply pl-20; */
+}
+
+[dir='rtl'] .container {
+    @apply bg-green-500;
+    /* @apply pr-20; */
 }
