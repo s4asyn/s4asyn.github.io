@@ -1,5 +1,11 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
 import { Layout } from '../components';
 
-export default ({ data }) => <Layout></Layout>;
+const SeoData = {
+    description: 'This Should be filled',
+    title: 'Index Page',
+};
+
+export default () => {
+    return <Layout SeoData={SeoData}>Hello World!</Layout>;
+};

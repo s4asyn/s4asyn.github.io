@@ -4,8 +4,12 @@ import Layout from '../components/layout';
 
 export default ({ data }) => {
     const post = data.markdownRemark;
+    const SeoData = {
+        description: 'This Should be filled',
+        title: 'Blog Post',
+    };
     return (
-        <Layout>
+        <Layout SeoData={SeoData}>
             <div>
                 <h1>{post.frontmatter.title}</h1>
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />

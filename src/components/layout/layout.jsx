@@ -2,19 +2,21 @@ import React, { Children } from 'react';
 import PropTypes from 'prop-types';
 /* import Subcomponent */
 import { LanguageContextProvider } from '../context';
+import HtmlHead from '../html-head';
 import SEO from '../seo';
-
 /* import Style*/
 import LayoutStyle from './layout.module.css';
 
-const Layout = ({ children }) => (
+const Layout = ({ SeoData, children }) => (
     <LanguageContextProvider>
-        <SEO />
+        <HtmlHead />
+        <SEO SeoData={SeoData} />
         <div className={LayoutStyle.container}>{children}</div>
     </LanguageContextProvider>
 );
 
 Layout.PropTypes = {
+    SeoData: PropTypes.node.isRequired,
     children: PropTypes.node.isRequired,
 };
 

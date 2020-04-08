@@ -3,9 +3,12 @@ import { Link, graphql } from 'gatsby';
 import Layout from '../components/layout';
 
 export default ({ data }) => {
-    const post = data.markdownRemark;
+    const SeoData = {
+        description: 'This Should be filled',
+        title: 'Blog Post List',
+    };
     return (
-        <Layout>
+        <Layout SeoData={SeoData}>
             <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
             {data.allMarkdownRemark.edges.map(({ node }) => (
                 <div key={node.id}>
@@ -32,6 +35,7 @@ export const query = graphql`
                     frontmatter {
                         title
                         date(formatString: "DD MMMM, YYYY")
+                        lang
                     }
                     fields {
                         slug
