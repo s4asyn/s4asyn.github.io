@@ -1,6 +1,16 @@
 module.exports = {
     plugins: [
         {
+            resolve: 'gatsby-plugin-module-resolver',
+            options: {
+                root: './',
+                aliases: {
+                    '@s4/assets': './contents/assets',
+                    '@s4/configs': './configs/',
+                },
+            },
+        },
+        {
             resolve: `gatsby-source-filesystem`,
             options: {
                 name: `contents`,
