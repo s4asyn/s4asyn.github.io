@@ -1,6 +1,14 @@
 module.exports = {
     plugins: [
         {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `contents`,
+                path: `${__dirname}/contents/`,
+            },
+        },
+        `gatsby-transformer-remark`,
+        {
             resolve: 'gatsby-plugin-postcss',
             options: {
                 postCssPlugins: [
