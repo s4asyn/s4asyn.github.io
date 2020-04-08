@@ -1,5 +1,11 @@
 module.exports = {
-    theme: {},
+    theme: {
+        extend: {
+            fontFamily: {
+                farsi: ['Vazir'],
+            },
+        },
+    },
     variants: {
         float: ['responsive', 'direction'],
         margin: ['responsive', 'direction'],

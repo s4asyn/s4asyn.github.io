@@ -1,13 +1,11 @@
-.container {
-    @apply pis-10;
+.layoutContainer {
+    @apply pis-0;
 }
 
-[dir='ltr'] .container {
-    @apply bg-yellow-500;
-    /* @apply pl-20; */
+[dir='ltr'] .layoutContainer {
+    /* @apply bg-yellow-500; */
 }
 
-[dir='rtl'] .container {
-    @apply bg-green-500;
-    /* @apply pr-20; */
+[dir='rtl'] .layoutContainer {
+    /* @apply bg-green-500; */
 }

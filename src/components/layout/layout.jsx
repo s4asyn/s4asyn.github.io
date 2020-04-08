@@ -11,7 +11,7 @@ const Layout = ({ SeoData, children }) => (
     <LanguageContextProvider>
         <HtmlHead />
         <SEO SeoData={SeoData} />
-        <div className={LayoutStyle.container}>{children}</div>
+        <div className={LayoutStyle.layoutContainer}>{children}</div>
     </LanguageContextProvider>
 );
 

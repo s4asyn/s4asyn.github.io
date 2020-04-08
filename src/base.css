@@ -1,5 +1,62 @@
 /*! purgecss start ignore */
 @tailwind base;
+
+/* Add Vazir Font! */
+@font-face {
+    font-family: Vazir;
+    src: url('/fonts/Vazir/Vazir.woff2') format('woff2'),
+        url('/fonts/Vazir/Vazir.woff') format('woff'),
+        url('/fonts/Vazir/Vazir.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Vazir;
+    src: url('/fonts/Vazir/Vazir-Bold.woff2') format('woff2'),
+        url('/fonts/Vazir/Vazir-Bold.woff') format('woff'),
+        url('/fonts/Vazir/Vazir-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Vazir;
+    src: url('/fonts/Vazir/Vazir-Thin.woff2') format('woff2'),
+        url('/fonts/Vazir/Vazir-Thin.woff') format('woff'),
+        url('/fonts/Vazir/Vazir-Thin.ttf') format('truetype');
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: Vazir;
+    src: url('/fonts/Vazir/Vazir-Light.woff2') format('woff2'),
+        url('/fonts/Vazir/Vazir-Light.woff') format('woff'),
+        url('/fonts/Vazir/Vazir-Light.ttf') format('truetype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Vazir;
+    src: url('/fonts/Vazir/Vazir-Medium.woff2') format('woff2'),
+        url('/fonts/Vazir/Vazir-Medium.woff') format('woff'),
+        url('/fonts/Vazir/Vazir-Medium.ttf') format('truetype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Vazir;
+    src: url('/fonts/Vazir/Vazir-Black.woff2') format('woff2'),
+        url('/fonts/Vazir/Vazir-Black.woff') format('woff'),
+        url('/fonts/Vazir/Vazir-Black.ttf') format('truetype');
+    font-weight: 900;
+}
+
+/* */
 @tailwind components;
 /*! purgecss end ignore */
+
 @tailwind utilities;
+
+/* Add some global style*/
+html[dir='rtl'] {
+    @apply font-farsi;
+}
