@@ -22,6 +22,16 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
 exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions;
+    createPage({
+        path: '/fa/blog',
+        component: path.resolve(`./src/templates/blog-index.jsx`),
+        context: { lang: 'fa' },
+    });
+    createPage({
+        path: '/en/blog',
+        component: path.resolve(`./src/templates/blog-index.jsx`),
+        context: { lang: 'en' },
+    });
     const result = await graphql(`
         query {
             allMarkdownRemark {
@@ -39,7 +49,7 @@ exports.createPages = async ({ graphql, actions }) => {
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
         createPage({
             path: node.fields.slug,
-            component: path.resolve(`./src/templates/blog.jsx`),
+            component: path.resolve(`./src/templates/blog-post.jsx`),
             context: {
                 // Data passed to context is available
                 // in page queries as GraphQL variables.
