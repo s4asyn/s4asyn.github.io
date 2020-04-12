@@ -1,11 +1,13 @@
+/*
 .layoutContainer {
     @apply pis-0;
 }
 
 [dir='ltr'] .layoutContainer {
-    /* @apply bg-yellow-500; */
+    @apply bg-yellow-500;
 }
 
 [dir='rtl'] .layoutContainer {
-    /* @apply bg-green-500; */
+    @apply bg-green-500;
 }
+*/

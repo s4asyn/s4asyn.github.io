@@ -14,6 +14,7 @@
             "/* import Style*/",
             "import $1Style from './$2.module.css';",
             "",
+            "/* Start Component */",
             "const $1 = ({ children }) => (",
             "    <div className={$1Style.$0}>{children}</div>",
             ");",

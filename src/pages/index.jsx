@@ -1,11 +1,55 @@
 import React from 'react';
+import { Link, graphql } from 'gatsby';
 import { Layout } from '../components';
 
 const SeoData = {
-    description: 'This Should be filled',
-    title: 'Index Page',
+    description: 'جستارها',
+    title: 'سعید عصائیان',
 };
 
-export default () => {
-    return <Layout SeoData={SeoData}>Hello World!</Layout>;
+export default ({ data }) => {
+    return (
+        <Layout SeoData={SeoData}>
+            <article>
+                {/* <h4>{data.allMarkdownRemark.totalCount} Posts</h4> */}
+                {data.allMarkdownRemark.edges.map(({ node }) => (
+                    <section key={node.id} className="mt-8">
+                        <Link to={node.fields.slug}>
+                            <h3 className="text-2xl font-semibold text-gray-900">
+                                {node.frontmatter.title}
+                            </h3>
+                            <p className="text-gray-600 italic">
+                                {node.frontmatter.date}
+                            </p>
+                        </Link>
+                        <p className="">{node.frontmatter.desc}</p>
+                    </section>
+                ))}
+            </article>
+        </Layout>
+    );
 };
+
+export const query = graphql`
+    query {
+        allMarkdownRemark(
+            filter: { frontmatter: { published: { eq: "yes" } } }
+        ) {
+            totalCount
+            edges {
+                node {
+                    id
+                    frontmatter {
+                        title
+                        date(formatString: "DD MMMM, YYYY")
+                        lang
+                        desc
+                    }
+                    fields {
+                        slug
+                    }
+                }
+            }
+        }
+    }
+`;

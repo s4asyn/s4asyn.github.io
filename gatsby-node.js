@@ -22,6 +22,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
 exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions;
+    /*
     createPage({
         path: '/fa/blog',
         component: path.resolve(`./src/templates/blog-index.jsx`),
@@ -32,6 +33,7 @@ exports.createPages = async ({ graphql, actions }) => {
         component: path.resolve(`./src/templates/blog-index.jsx`),
         context: { lang: 'en' },
     });
+    */
     const result = await graphql(`
         query {
             allMarkdownRemark {

@@ -1,19 +1,19 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Layout from '../components/layout';
+import { Layout } from '../components';
 
 export default ({ data }) => {
     const post = data.markdownRemark;
     const SeoData = {
-        description: 'This Should be filled',
-        title: 'Blog Post',
+        description: post.frontmatter.desc,
+        title: post.frontmatter.title,
+        date: post.frontmatter.date,
     };
     return (
         <Layout SeoData={SeoData}>
-            <div>
-                <h1>{post.frontmatter.title}</h1>
+            <article className="mt-8">
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
-            </div>
+            </article>
         </Layout>
     );
 };
@@ -24,6 +24,9 @@ export const query = graphql`
             html
             frontmatter {
                 title
+                date(formatString: "DD MMMM, YYYY")
+                lang
+                desc
             }
         }
     }

@@ -60,3 +60,7 @@
 html[dir='rtl'] {
     @apply font-farsi;
 }
+
+body {
+    @apply bg-red-100;
+}
