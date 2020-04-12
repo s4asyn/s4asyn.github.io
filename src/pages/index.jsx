@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
+import moment from 'moment-jalaali';
+
 import { Layout } from '../components';
 
 const SeoData = {
@@ -19,7 +21,10 @@ export default ({ data }) => {
                                 {node.frontmatter.title}
                             </h3>
                             <p className="text-gray-600 italic">
-                                {node.frontmatter.date}
+                                {moment(
+                                    node.frontmatter.date,
+                                    'DD MMMM, YYYY',
+                                ).format('jYYYY/jMM/jDD')}
                             </p>
                         </Link>
                         <p className="">{node.frontmatter.desc}</p>

@@ -1,5 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import moment from 'moment-jalaali';
+
 import { Layout } from '../components';
 
 export default ({ data }) => {
@@ -7,7 +9,9 @@ export default ({ data }) => {
     const SeoData = {
         description: post.frontmatter.desc,
         title: post.frontmatter.title,
-        date: post.frontmatter.date,
+        date: moment(post.frontmatter.date, 'DD MMMM, YYYY').format(
+            'jYYYY/jMM/jDD',
+        ),
     };
     return (
         <Layout SeoData={SeoData}>
