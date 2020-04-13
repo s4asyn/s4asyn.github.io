@@ -1,7 +1,7 @@
 module.exports = {
     title: "Saeed Asaiyan's Personal Website",
     url: 'https://www.asaiyan.com/',
-    favicon: '/static/favicon.ico',
+    favicon: '/favicon.ico',
     // logo: '',
     // cover: '',
     legalName: 'Saeed Asaiyan',
