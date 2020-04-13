@@ -64,3 +64,15 @@ html[dir='rtl'] {
 body {
     @apply bg-red-100;
 }
+
+code[class*='language-'],
+pre[class*='language-'] {
+    direction: ltr;
+    text-align: left;
+}
+/* Adjust the position of the line numbers */
+.gatsby-highlight pre[class*='language-'].line-numbers {
+    padding: 0;
+    padding-left: 2.5em;
+    overflow: initial;
+}
