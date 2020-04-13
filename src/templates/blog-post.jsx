@@ -4,6 +4,8 @@ import moment from 'moment-jalaali';
 
 import { Layout } from '../components';
 
+import BlogPostStyle from './blog-post.module.css';
+
 export default ({ data }) => {
     const post = data.markdownRemark;
     const SeoData = {
@@ -15,7 +17,7 @@ export default ({ data }) => {
     };
     return (
         <Layout SeoData={SeoData}>
-            <article className="mt-8">
+            <article className={BlogPostStyle.markdownPost}>
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
             </article>
         </Layout>

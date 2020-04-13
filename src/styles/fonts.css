@@ -1,7 +1,4 @@
-/*! purgecss start ignore */
-@tailwind base;
-
-/* Add Vazir Font! */
+/* Vazir font*/
 @font-face {
     font-family: Vazir;
     src: url('/fonts/Vazir/Vazir.woff2') format('woff2'),
@@ -48,31 +45,4 @@
         url('/fonts/Vazir/Vazir-Black.woff') format('woff'),
         url('/fonts/Vazir/Vazir-Black.ttf') format('truetype');
     font-weight: 900;
-}
-
-/* */
-@tailwind components;
-/*! purgecss end ignore */
-
-@tailwind utilities;
-
-/* Add some global style*/
-html[dir='rtl'] {
-    @apply font-farsi;
-}
-
-body {
-    @apply bg-red-100;
-}
-
-code[class*='language-'],
-pre[class*='language-'] {
-    direction: ltr;
-    text-align: left;
-}
-/* Adjust the position of the line numbers */
-.gatsby-highlight pre[class*='language-'].line-numbers {
-    padding: 0;
-    padding-left: 2.5em;
-    overflow: initial;
 }

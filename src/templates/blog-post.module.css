@@ -1,0 +1,8 @@
+.markdownPost {
+    @apply mt-2;
+}
+
+.markdownPost p {
+    @apply leading-relaxed;
+    @apply pt-4;
+}

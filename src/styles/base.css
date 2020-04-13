@@ -1,0 +1,20 @@
+/*! purgecss start ignore */
+@tailwind base;
+
+@import './fonts.css';
+
+@tailwind components;
+/*! purgecss end ignore */
+
+@tailwind utilities;
+
+/* Add some global style*/
+html[dir='rtl'] {
+    @apply font-farsi;
+}
+
+body {
+    @apply bg-red-100;
+}
+
+@import './code.css';
