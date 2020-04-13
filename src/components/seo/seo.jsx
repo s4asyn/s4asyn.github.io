@@ -5,7 +5,10 @@ const config = require('@s4/configs');
 /* import Style*/
 
 const SEO = ({ SeoData }) => (
-    <Helmet>
+    <Helmet
+        title={SeoData.title}
+        titleTemplate={`%s | ${config.metadata.title}`}
+    >
         <meta name="description" content={SeoData.description} />
         {/* <meta name="image" content={config.cover} /> */}
 
