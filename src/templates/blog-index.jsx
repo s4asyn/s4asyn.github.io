@@ -25,6 +25,8 @@ export default ({ data }) => {
     );
 };
 
+/* To Remove this warning: warn The GraphQL query in the non-page component
+                           "src/templates/blog-index.jsx" will not be run
 export const query = graphql`
     query($lang: String!) {
         allMarkdownRemark(filter: { frontmatter: { lang: { eq: $lang } } }) {
@@ -46,3 +48,4 @@ export const query = graphql`
         }
     }
 `;
+*/
