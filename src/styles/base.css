@@ -17,4 +17,18 @@ body {
     @apply bg-red-100;
 }
 
+a *:hover {
+    @apply text-indigo-700;
+}
+a *:focus {
+    @apply text-indigo-700;
+}
+a *:active {
+    @apply text-indigo-400;
+}
+a:active {
+    @apply outline-none;
+}
+
+/* */
 @import './code.css';

@@ -20,13 +20,13 @@ export default ({ data }) => {
                             <h3 className="text-2xl font-semibold text-gray-900">
                                 {node.frontmatter.title}
                             </h3>
-                            <p className="text-gray-600 italic">
-                                {moment(
-                                    node.frontmatter.date,
-                                    'DD MMMM, YYYY',
-                                ).format('jYYYY/jMM/jDD')}
-                            </p>
                         </Link>
+                        <p className="text-gray-600 italic">
+                            {moment(
+                                node.frontmatter.date,
+                                'DD MMMM, YYYY',
+                            ).format('jYYYY/jMM/jDD')}
+                        </p>
                         <p className="">{node.frontmatter.desc}</p>
                     </section>
                 ))}
