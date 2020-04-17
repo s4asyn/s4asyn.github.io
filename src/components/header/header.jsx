@@ -8,9 +8,9 @@ const Header = ({ PageTitle, PageSubtitle }) => (
     <header className="border-b-2 border-gray-700">
         <NavBar />
         <div className="pt-32 pb-16 text-center">
-            <div className="text-4xl text-gray-900 font-extrabold">
+            <h1 className="text-4xl text-gray-900 font-extrabold">
                 {PageTitle}
-            </div>
+            </h1>
             <div className="text-xl text-gray-600 font-bold">
                 {PageSubtitle}
             </div>

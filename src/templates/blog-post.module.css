@@ -3,8 +3,28 @@
     @apply px-2;
 }
 
+.markdownPost * {
+    @apply text-gray-900;
+}
+
 .markdownPost p {
     @apply leading-relaxed;
     @apply pt-4;
     @apply text-justify;
+}
+
+.markdownPost h2 {
+    @apply font-semibold;
+    @apply text-2xl;
+    @apply pt-6;
+}
+
+.markdownPost h3 {
+    @apply font-semibold;
+    @apply text-xl;
+    @apply pt-5;
+}
+
+.markdownPost a {
+    @apply underline;
 }
