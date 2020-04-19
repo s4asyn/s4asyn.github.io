@@ -16,25 +16,3 @@ html[dir='rtl'] {
 body {
     @apply bg-red-100;
 }
-
-a:hover,
-a *:hover {
-    @apply text-indigo-700;
-}
-
-a:focus,
-a *:focus {
-    @apply text-indigo-700;
-}
-
-a:active,
-a *:active {
-    @apply text-indigo-400;
-}
-
-a:active {
-    @apply outline-none;
-}
-
-/* */
-@import './code.css';

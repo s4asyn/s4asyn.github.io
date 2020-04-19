@@ -2,9 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import moment from 'moment-jalaali';
 
-import { Layout } from '../components';
-
-import BlogPostStyle from './blog-post.module.css';
+import { Layout, MarkdownPost } from '../components';
 
 export default ({ data }) => {
     const post = data.markdownRemark;
@@ -17,9 +15,9 @@ export default ({ data }) => {
     };
     return (
         <Layout SeoData={SeoData}>
-            <article className={BlogPostStyle.markdownPost}>
+            <MarkdownPost>
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
-            </article>
+            </MarkdownPost>
         </Layout>
     );
 };
