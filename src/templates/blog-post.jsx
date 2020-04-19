@@ -1,11 +1,15 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 import moment from 'moment-jalaali';
+import { MDXProvider } from '@mdx-js/react';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import { Layout, MarkdownPost } from '../components';
 
+const shortcodes = { Link }; // Provide common components here
+
 export default ({ data }) => {
-    const post = data.markdownRemark;
+    const post = data.mdx;
     const SeoData = {
         description: post.frontmatter.desc,
         title: post.frontmatter.title,
@@ -16,7 +20,9 @@ export default ({ data }) => {
     return (
         <Layout SeoData={SeoData}>
             <MarkdownPost>
-                <div dangerouslySetInnerHTML={{ __html: post.html }} />
+                <MDXProvider components={shortcodes}>
+                    <MDXRenderer>{post.body}</MDXRenderer>
+                </MDXProvider>
             </MarkdownPost>
         </Layout>
     );
@@ -24,8 +30,8 @@ export default ({ data }) => {
 
 export const query = graphql`
     query($slug: String!) {
-        markdownRemark(fields: { slug: { eq: $slug } }) {
-            html
+        mdx(fields: { slug: { eq: $slug } }) {
+            body
             frontmatter {
                 title
                 date(formatString: "DD MMMM, YYYY")

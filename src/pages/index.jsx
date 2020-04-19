@@ -13,8 +13,8 @@ export default ({ data }) => {
     return (
         <Layout SeoData={SeoData}>
             <article>
-                {/* <h4>{data.allMarkdownRemark.totalCount} Posts</h4> */}
-                {data.allMarkdownRemark.edges.map(({ node }) => (
+                {/* <h4>{data.allMdx.totalCount} Posts</h4> */}
+                {data.allMdx.edges.map(({ node }) => (
                     <section key={node.id} className="mt-8">
                         <Link to={node.fields.slug}>
                             <h3 className="text-2xl font-semibold text-gray-900">
@@ -37,7 +37,7 @@ export default ({ data }) => {
 
 export const query = graphql`
     query {
-        allMarkdownRemark(
+        allMdx(
             filter: { frontmatter: { published: { eq: "yes" } } }
             sort: { fields: frontmatter___date, order: DESC }
         ) {
