@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 import moment from 'moment-jalaali';
 
-import { Layout } from '../components';
+import { Layout } from '#components';
 
 const SeoData = {
     description: 'جستارها',

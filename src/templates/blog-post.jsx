@@ -4,7 +4,7 @@ import moment from 'moment-jalaali';
 import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-import { Layout, MarkdownPost } from '../components';
+import { Layout, MarkdownPost } from '#components';
 
 const shortcodes = { Link }; // Provide common components here
 

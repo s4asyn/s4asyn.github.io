@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 const { Provider, Consumer } = React.createContext();
 
-class LanguageContextProvider extends Component {
+class ContextProvider extends Component {
     state = {
         language: 'fa',
     };
@@ -28,4 +28,4 @@ class LanguageContextProvider extends Component {
     }
 }
 
-export { LanguageContextProvider, Consumer as LanguageContextConsumer };
+export { ContextProvider, Consumer as ContextConsumer };

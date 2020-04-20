@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 /* import Subcomponent */
-import { LanguageContextProvider } from '../context';
+import { ContextProvider } from '#states';
 import HtmlHead from '../html-head';
 import SEO from '../seo';
 import Header from '../header';
@@ -10,7 +10,7 @@ import Main from '../main';
 // import LayoutStyle from './layout.module.css';
 
 const Layout = ({ SeoData, children }) => (
-    <LanguageContextProvider>
+    <ContextProvider>
         <HtmlHead />
         <SEO SeoData={SeoData} />
         <div className="antialiased max-w-full mx-4 lg:max-w-4xl lg:mx-auto">
@@ -20,7 +20,7 @@ const Layout = ({ SeoData, children }) => (
             />
             <Main>{children}</Main>
         </div>
-    </LanguageContextProvider>
+    </ContextProvider>
 );
 
 Layout.PropTypes = {

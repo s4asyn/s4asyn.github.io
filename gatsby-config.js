@@ -5,8 +5,10 @@ module.exports = {
             options: {
                 root: './',
                 aliases: {
-                    '@s4/assets': './contents/assets',
-                    '@s4/configs': './configs/',
+                    '#components': './src/components/',
+                    '#states': './src/states/',
+                    '#configs': './configs/',
+                    '#static': './static/',
                 },
             },
         },

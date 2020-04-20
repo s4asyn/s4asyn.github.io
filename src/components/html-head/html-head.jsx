@@ -1,13 +1,14 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 /* import Subcomponent */
-import { LanguageContextConsumer } from '../context';
-const config = require('@s4/configs');
+import { ContextConsumer } from '#states';
+
+const config = require('#configs');
 
 /* import Style*/
 
 const HtmlHead = () => (
-    <LanguageContextConsumer>
+    <ContextConsumer>
         {({ language }) => (
             <Helmet>
                 <html lang={language} dir={language === 'fa' ? 'rtl' : 'ltr'} />
@@ -16,7 +17,7 @@ const HtmlHead = () => (
                 {/* <meta name="image" content={config.cover} /> */}
             </Helmet>
         )}
-    </LanguageContextConsumer>
+    </ContextConsumer>
 );
 
 export default HtmlHead;

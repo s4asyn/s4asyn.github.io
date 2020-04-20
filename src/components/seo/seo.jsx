@@ -1,7 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 /* import Subcomponent */
-const config = require('@s4/configs');
+const config = require('#configs');
 /* import Style*/
 
 const SEO = ({ SeoData }) => (
