@@ -2,7 +2,7 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                farsi: ['Vazir'],
+                body: 'var(--font-body)',
             },
         },
     },

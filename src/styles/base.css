@@ -8,11 +8,6 @@
 
 @tailwind utilities;
 
-/* Add some global style*/
-html[dir='rtl'] {
-    @apply font-farsi;
-}
-
-body {
-    @apply bg-red-100;
-}
+/*! purgecss start ignore */
+@import './themes.css';
+/*! purgecss end ignore */

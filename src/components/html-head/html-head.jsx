@@ -15,6 +15,13 @@ const HtmlHead = () => (
                 <link rel="shortcut icon" href={config.metadata.favicon} />
                 <meta name="robots" content="index, follow" />
                 {/* <meta name="image" content={config.cover} /> */}
+                <body
+                    className={`${
+                        language === 'fa'
+                            ? 'body-lang-farsi'
+                            : 'body-lang-english'
+                    } font-body`}
+                />
             </Helmet>
         )}
     </ContextConsumer>
