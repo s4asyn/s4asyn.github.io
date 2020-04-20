@@ -1,7 +1,7 @@
 .postBody {
     @apply mt-2;
     @apply px-2;
-    @apply text-gray-900;
+    @apply text-primary;
 
     p {
         @apply leading-relaxed;

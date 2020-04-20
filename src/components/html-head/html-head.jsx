@@ -9,7 +9,7 @@ const config = require('#configs');
 
 const HtmlHead = () => (
     <ContextConsumer>
-        {({ language }) => (
+        {({ language, theme }) => (
             <Helmet>
                 <html lang={language} dir={language === 'fa' ? 'rtl' : 'ltr'} />
                 <link rel="shortcut icon" href={config.metadata.favicon} />
@@ -17,6 +17,11 @@ const HtmlHead = () => (
                 {/* <meta name="image" content={config.cover} /> */}
                 <body
                     className={`${
+                        theme === 'light'
+                            ? 'body-theme-light'
+                            : 'body-theme-dark'
+                    } bg-body
+                    ${
                         language === 'fa'
                             ? 'body-lang-farsi'
                             : 'body-lang-english'

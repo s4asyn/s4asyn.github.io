@@ -17,6 +17,8 @@
 
 # Style
 
+-   [x] Add theme (light/dark)
+
 ## Code
 
 -   [x] Add Syntax Highlighting

@@ -17,11 +17,11 @@ export default ({ data }) => {
                 {data.allMdx.edges.map(({ node }) => (
                     <section key={node.id} className="mt-8">
                         <Link to={node.fields.slug}>
-                            <h3 className="text-2xl font-semibold text-gray-900">
+                            <h3 className="text-2xl font-semibold text-primary">
                                 {node.frontmatter.title}
                             </h3>
                         </Link>
-                        <p className="text-gray-600 italic">
+                        <p className="text-secondary italic">
                             {moment(
                                 node.frontmatter.date,
                                 'DD MMMM, YYYY',

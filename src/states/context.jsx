@@ -4,6 +4,7 @@ const { Provider, Consumer } = React.createContext();
 class ContextProvider extends Component {
     state = {
         language: 'fa',
+        theme: 'light',
     };
 
     toggleLanguage = () => {
@@ -13,13 +14,21 @@ class ContextProvider extends Component {
             };
         });
     };
-
+    toggleTheme = () => {
+        this.setState((prevState) => {
+            return {
+                theme: prevState.theme === 'light' ? 'dark' : 'light',
+            };
+        });
+    };
     render() {
         return (
             <Provider
                 value={{
                     language: this.state.language,
                     toggleLanguage: this.toggleLanguage,
+                    theme: this.state.theme,
+                    toggleTheme: this.toggleTheme,
                 }}
             >
                 {this.props.children}

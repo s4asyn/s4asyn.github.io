@@ -4,6 +4,14 @@ module.exports = {
             fontFamily: {
                 body: 'var(--font-body)',
             },
+            backgroundColor: {
+                body: 'var(--color-bg-body)',
+                nav: 'var(--color-bg-nav)',
+            },
+            textColor: {
+                primary: 'var(--color-text-primary)',
+                secondary: 'var(--color-text-secondary)',
+            },
         },
     },
     // Recomended order: ['responsive', 'group-hover', 'focus-within', 'first',
