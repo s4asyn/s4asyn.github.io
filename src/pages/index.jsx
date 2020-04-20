@@ -27,7 +27,7 @@ export default ({ data }) => {
                                 'DD MMMM, YYYY',
                             ).format('jYYYY/jMM/jDD')}
                         </p>
-                        <p className="">{node.frontmatter.desc}</p>
+                        <p className="text-primary">{node.frontmatter.desc}</p>
                     </section>
                 ))}
             </article>
