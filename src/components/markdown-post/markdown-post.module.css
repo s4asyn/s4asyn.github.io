@@ -1,3 +1,5 @@
+/*! purgecss start ignore */
+/*! purgecss start ignore */
 .postBody {
     @apply mt-2;
     @apply px-2;
@@ -37,3 +39,4 @@
         @apply pl-10;
     }
 }
+/*! purgecss end ignore */
