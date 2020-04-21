@@ -8,16 +8,19 @@
 
 # Components
 
--   [ ] Chart
-
-# Plugins
-
 -   [x] Add MDX
 -   [ ] Add Image
+-   [ ] Chart
+
+# states
+
+-   [ ] presistant states
 
 # Style
 
 -   [x] Add theme (light/dark)
+-   [] Markdown
+    -   [ ] blockquote
 
 ## Code
 

@@ -1,15 +1,16 @@
 module.exports = {
     title: "Saeed Asaiyan's Personal Website",
-    url: 'https://www.asaiyan.com/',
+    domain: 'asaiyan.com',
+    url: 'https://www.asaiyan.com',
     favicon: '/favicon.ico',
     // logo: '',
-    // cover: '',
     legalName: 'Saeed Asaiyan',
     description: 'This is my personal site',
-    // googleAnalyticsID: '',
-    // social: {
-    //     twitter: '',
-    // },
+    googleAnalytics: {
+        trackingId: 'UA-163585154-1',
+        optimizeId: 'GTM-M5MD9VR',
+        experimentId: ' WuicPPzOR1yf5tSmXtMOvQ',
+    },
     socialLinks: {
         github: 'https://github.com/s4asyn',
         linkedin: 'https://ir.linkedin.com/in/asaiyan/',
@@ -21,6 +22,7 @@ module.exports = {
     },
     contact: {
         email: 's4asyn@gmail.com',
+        twitter: 's_asyn',
     },
     foundingDate: '2020',
 };

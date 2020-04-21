@@ -3,18 +3,14 @@ import Helmet from 'react-helmet';
 /* import Subcomponent */
 import { ContextConsumer } from '#states';
 
-const config = require('#configs');
-
-/* import Style*/
-
 const HtmlHead = () => (
     <ContextConsumer>
         {({ language, theme }) => (
             <Helmet>
-                <html lang={language} dir={language === 'fa' ? 'rtl' : 'ltr'} />
-                <link rel="shortcut icon" href={config.metadata.favicon} />
-                <meta name="robots" content="index, follow" />
-                {/* <meta name="image" content={config.cover} /> */}
+                <html
+                    lang={language}
+                    dir={language === 'fa_IR' ? 'rtl' : 'ltr'}
+                />
                 <body
                     className={`${
                         theme === 'light'
@@ -22,7 +18,7 @@ const HtmlHead = () => (
                             : 'body-theme-dark'
                     } bg-body
                     ${
-                        language === 'fa'
+                        language === 'fa_IR'
                             ? 'body-lang-farsi'
                             : 'body-lang-english'
                     } font-body`}

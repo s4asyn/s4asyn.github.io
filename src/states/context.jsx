@@ -3,14 +3,14 @@ const { Provider, Consumer } = React.createContext();
 
 class ContextProvider extends Component {
     state = {
-        language: 'fa',
+        language: 'fa_IR',
         theme: 'light',
     };
 
     toggleLanguage = () => {
         this.setState((prevState) => {
             return {
-                language: prevState.language === 'fa' ? 'en' : 'fa',
+                language: prevState.language === 'fa_IR' ? 'en_US' : 'fa_IR',
             };
         });
     };
