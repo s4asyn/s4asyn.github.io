@@ -21,10 +21,17 @@ module.exports = {
                 path: `${__dirname}/contents/`,
             },
         },
+        `gatsby-plugin-sharp`,
         {
             resolve: `gatsby-plugin-mdx`,
             options: {
-                plugins: [
+                gatsbyRemarkPlugins: [
+                    {
+                        resolve: `gatsby-remark-images`,
+                        options: {
+                            maxWidth: 1035,
+                        },
+                    },
                     {
                         resolve: `gatsby-remark-prismjs`,
                         options: {

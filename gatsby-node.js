@@ -5,7 +5,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     const { createNodeField } = actions;
     if (node.internal.type === `Mdx`) {
         const slugPath = createFilePath({ node, getNode, basePath: `pages` });
-        const slugPlain = slugPath.split('.')[0];
+        let slugPlain = slugPath.split('.')[0].replace(/\/index$/i, '');
         createNodeField({
             node,
             name: `slugPlain`,

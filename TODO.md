@@ -9,7 +9,7 @@
 # Components
 
 -   [x] Add MDX
--   [ ] Add Image
+-   [x] Add Image
 -   [ ] Chart
 
 # states
@@ -21,6 +21,7 @@
 -   [x] Add theme (light/dark)
 -   [] Markdown
     -   [ ] blockquote
+    -   [ ] image
 
 ## Code
 
