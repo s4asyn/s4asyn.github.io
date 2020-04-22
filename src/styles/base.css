@@ -4,7 +4,7 @@
 @import './themes.css';
 
 @import 'tailwindcss/components';
-@import 'prismjs/themes/prism.css';
+@import 'prismjs/themes/prism-okaidia.css';
 /*! purgecss end ignore */
 
 @import 'tailwindcss/utilities';
