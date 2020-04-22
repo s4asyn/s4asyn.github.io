@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{pssB:function(e,t,n){"use strict";n.r(t);var a=n("q1tI"),c=n.n(a),i=n("Kvkj"),r={description:"اینجا کسی هشیار نیست...",title:"خطای 404"};t.default=function(){return c.a.createElement(i.a,{SeoData:r},c.a.createElement("article",null))}}}]);
+//# sourceMappingURL=component---src-pages-404-jsx-e726ab9ee15aae90505e.js.map
