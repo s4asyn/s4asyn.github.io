@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 /* import Subcomponent */
 import NavBar from './navbar';
 
@@ -18,9 +18,9 @@ const Header = ({ PageTitle, PageSubtitle }) => (
     </header>
 );
 
-Header.PropTypes = {
-    PageTitle: PropTypes.node.isRequired,
-    PageSubtitle: PropTypes.node.isRequired,
+Header.propTypes = {
+    PageTitle: propTypes.node.isRequired,
+    PageSubtitle: propTypes.node.isRequired,
 };
 
 export default Header;

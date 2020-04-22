@@ -1,31 +1,48 @@
 {
     "S4 Component index.js": {
-        "prefix": ["s4comindex"],
+        "prefix": ["s4compindex"],
         "body": ["import $1 from './$2';", "", "export default $1;", "$0"],
         "description": "A Component index.js"
     },
     "S4 Component With only children": {
-        "prefix": ["s4comchild"],
+        "prefix": ["s4compstyle"],
         "body": [
             "import React, { Children } from 'react';",
-            "import PropTypes from 'prop-types';",
+            "import propTypes from 'prop-types';",
             "/* import Subcomponent */",
             "",
             "/* import Style*/",
-            "import $1Style from './$2.module.css';",
+            "import componentStyle from './$2.module.css';",
             "",
             "/* Start Component */",
             "const $1 = ({ children }) => (",
-            "    <div className={$1Style.$0}>{children}</div>",
+            "    <div className={component1Style.$0}>{children}</div>",
             ");",
             "",
-            "$1.PropTypes = {",
-            "    children: PropTypes.node.isRequired,",
+            "$1.propTypes = {",
+            "    children: propTypes.node.isRequired,",
             "};",
             "",
             "export default $1;",
             ""
         ],
         "description": "A Component"
+    },
+    "S4 pure Component": {
+        "prefix": ["s4compure"],
+        "body": [
+            "import React from 'react';",
+            "import propTypes from 'prop-types';",
+            "/* import Subcomponent */",
+            "",
+            "/* Start Component */",
+            "const $1 = ({ children }) => (",
+            "    <div className=''>$0</div>",
+            ");",
+            "",
+            "export default $1;",
+            ""
+        ],
+        "description": "A Pure Component"
     }
 }

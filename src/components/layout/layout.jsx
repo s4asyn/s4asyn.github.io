@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 /* import Subcomponent */
 import HtmlHead from '../html-head';
 import SEO from '../seo';
@@ -22,9 +22,9 @@ const Layout = ({ SeoData, children }) => (
     </>
 );
 
-Layout.PropTypes = {
-    SeoData: PropTypes.node.isRequired,
-    children: PropTypes.node.isRequired,
+Layout.propTypes = {
+    SeoData: propTypes.object.isRequired,
+    children: propTypes.node.isRequired,
 };
 
 export default Layout;

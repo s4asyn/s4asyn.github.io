@@ -1,5 +1,5 @@
 import React, { Children } from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 /* import Subcomponent */
 import { ContextProvider } from '#states';
 
@@ -8,8 +8,8 @@ const WrapGatsbyPage = ({ children }) => (
     <ContextProvider>{children}</ContextProvider>
 );
 
-WrapGatsbyPage.PropTypes = {
-    children: PropTypes.node.isRequired,
+WrapGatsbyPage.propTypes = {
+    children: propTypes.node.isRequired,
 };
 
 export default WrapGatsbyPage;

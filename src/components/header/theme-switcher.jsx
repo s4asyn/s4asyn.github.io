@@ -12,15 +12,16 @@ const ThemSwitcher = () => {
         <ContextConsumer>
             {({ theme, toggleTheme }) => (
                 <label
-                    for="toogleTheme"
-                    class="relative flex items-center justify-center cursor-pointer pt-1"
+                    htmlFor="toogleTheme"
+                    className="relative flex items-center justify-center cursor-pointer pt-1"
                 >
                     <input
                         id="toogleTheme"
                         type="checkbox"
-                        class="hidden"
+                        className="hidden"
                         onClick={toggleTheme}
                         checked={theme === 'dark'}
+                        readOnly
                     />
                     <div className="w-10 h-4 bg-body rounded-full shadow-inner"></div>
                     <div
@@ -47,7 +48,7 @@ const ThemSwitcher = () => {
                                 height="24"
                             >
                                 <path
-                                    class="heroicon-ui"
+                                    className="heroicon-ui"
                                     d="M9.57 3.38a8 8 0 0 0 10.4 10.4 1 1 0 0 1 1.31 1.3 10 10 0 1 1-13-13 1 1 0 0 1 1.3 1.3zM7.1 5.04A8 8 0 1 0 18.3 16.27 10 10 0 0 1 7.08 5.04z"
                                 />
                             </svg>

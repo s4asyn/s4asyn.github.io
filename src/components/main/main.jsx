@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 /* import Subcomponent */
 
 /* import style */
@@ -9,8 +9,8 @@ const Main = ({ children }) => (
     <main className={Style.mainStyle}>{children}</main>
 );
 
-Main.PropTypes = {
-    children: PropTypes.node.isRequired,
+Main.propTypes = {
+    children: propTypes.node.isRequired,
 };
 
 export default Main;

@@ -26,7 +26,10 @@ const SEO = ({ SeoData }) => (
                 <meta name="robots" content="index, follow" />
                 <meta name="description" content={SeoData.description} />
                 {SeoData.cover && <meta name="image" content={SeoData.cover} />}
-                <meta property="og:locale" content={language} />
+                <meta
+                    property="og:locale"
+                    content={language === 'fa' ? 'fa_IR' : 'en_US'}
+                />
                 {config.metadata.url && SeoData.slung && (
                     <meta
                         property="og:url"

@@ -1,5 +1,5 @@
 import React, { Children } from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 /* import Subcomponent */
 
 /* import Style*/
@@ -10,8 +10,8 @@ const MarkDown = ({ children }) => (
     <article className={MarkDownStyle.postBody}>{children}</article>
 );
 
-MarkDown.PropTypes = {
-    children: PropTypes.node.isRequired,
+MarkDown.propTypes = {
+    children: propTypes.node.isRequired,
 };
 
 export default MarkDown;

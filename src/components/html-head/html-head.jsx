@@ -7,10 +7,7 @@ const HtmlHead = () => (
     <ContextConsumer>
         {({ language, theme }) => (
             <Helmet>
-                <html
-                    lang={language}
-                    dir={language === 'fa_IR' ? 'rtl' : 'ltr'}
-                />
+                <html lang={language} dir={language === 'fa' ? 'rtl' : 'ltr'} />
                 <body
                     className={`${
                         theme === 'light'
@@ -18,7 +15,7 @@ const HtmlHead = () => (
                             : 'body-theme-dark'
                     } bg-body
                     ${
-                        language === 'fa_IR'
+                        language === 'fa'
                             ? 'body-lang-farsi'
                             : 'body-lang-english'
                     } font-body`}
