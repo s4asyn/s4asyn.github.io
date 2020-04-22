@@ -23,6 +23,7 @@ module.exports = {
     contact: {
         email: 's4asyn@gmail.com',
         twitter: 's_asyn',
+        github: 's4asyn',
     },
     foundingDate: '2020',
 };

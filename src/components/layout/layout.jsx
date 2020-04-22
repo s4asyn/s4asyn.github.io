@@ -4,9 +4,8 @@ import propTypes from 'prop-types';
 import HtmlHead from '../html-head';
 import SEO from '../seo';
 import Header from '../header';
+import Footer from '../footer';
 import Main from '../main';
-/* import Style*/
-// import LayoutStyle from './layout.module.css';
 
 const Layout = ({ SeoData, children }) => (
     <>
@@ -18,6 +17,7 @@ const Layout = ({ SeoData, children }) => (
                 PageSubtitle={SeoData.description}
             />
             <Main>{children}</Main>
+            <Footer />
         </div>
     </>
 );
