@@ -46,6 +46,7 @@ module.exports = {
             resolve: 'gatsby-plugin-postcss',
             options: {
                 postCssPlugins: [
+                    require(`postcss-import`),
                     require(`tailwindcss`)(`./tailwind.config.js`),
                     require('postcss-nested'),
                     ...(process.env.NODE_ENV === 'production'
@@ -62,6 +63,7 @@ module.exports = {
             resolve: `gatsby-plugin-purgecss`,
             options: {
                 tailwind: true,
+                ignore: [],
             },
         },
         {

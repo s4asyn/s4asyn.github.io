@@ -1,5 +1,4 @@
 /*! purgecss start ignore */
-/*! purgecss start ignore */
 .postBody {
     @apply mt-2;
     @apply px-2;
@@ -32,11 +31,6 @@
     pre[class*='language-'] {
         direction: ltr;
         @apply text-left;
-    }
-    /* Adjust the position of the line numbers */
-    :global(.gatsby-highlight pre[class*='language-'].line-numbers) {
-        @apply p-0;
-        @apply pl-10;
     }
 }
 /*! purgecss end ignore */

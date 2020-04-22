@@ -17,12 +17,17 @@ desc: 'تبدیل، تغییر و کارهای ساده با مدیا در خط 
 برای تبدیل فایل‌های عکس من بیشتر از ابزار [ImageMagick](https://www.imagemagick.org/) استفاده می کنم. نسخه‌ی ۶ این ابزار در مخازن Debian و Ubuntu وجود دارد و من ترجیح می‌دهم از این ابراز را از روی مخزن بسازم و نصب کنم. برای این کار از دستورات زیر استفاده می‌کنم:
 
 ```bash
-sudo apt install libltdl-dev libtiff-dev libwmf-dev libjpeg-dev libjpeg62-turbo-dev \
-    libzstd-dev libwebp-dev librsvg2-dev libraw-dev libraqm-dev libpango1.0-dev \
-    libopenjp2-7-dev liblqr-1-0-dev libgraphviz-dev libfftw3-dev libdjvulibre-dev \
-    libgsl-dev librsvg2-dev librsvg2-common librsvg2-bin fonts-dejavu-core  \
-    fonts-droid-fallback fonts-noto-mono ghostscript gsfonts hicolor-icon-theme \
-    libxt6-dbg fonts-urw-base35 ghostscript-x fontconfig fontconfig-config libperl-dev
+sudo apt install libltdl-dev libtiff-dev \
+    libwmf-dev libjpeg-dev libjpeg62-turbo-dev \
+    libzstd-dev libwebp-dev librsvg2-dev \
+    libraw-dev libraqm-dev libpango1.0-dev \
+    libopenjp2-7-dev liblqr-1-0-dev libgraphviz-dev \
+    libfftw3-dev libdjvulibre-dev libgsl-dev \
+    librsvg2-dev librsvg2-common librsvg2-bin \
+    fonts-dejavu-core fonts-droid-fallback \
+    fonts-noto-mono ghostscript gsfonts \
+    hicolor-icon-theme libxt6-dbg fonts-urw-base35 \
+    ghostscript-x fontconfig fontconfig-config libperl-dev
 git clone https://github.com/ImageMagick/ImageMagick.git
 cd ImageMagick/
 git checkout 7.0.10-6
@@ -52,4 +57,4 @@ identify out.ico
 
 ![identify ico file](identify-ico.png)
 
-همان طور که در نتیجه‌ی خروجی شاهد هستیم، بعد از تبدیل کردن فایل PNG ورود به فرمت ICO، ۹ تصویر مختلف در فایل قرار گرفته است که هر کدام از این تصاویر ابعاد متفاوتی نسبت به دیگران دارد.
+همان طور که در نتیجه‌ی خروجی شاهد هستیم، بعد از تبدیل کردن فایل PNG ورودی به فرمت ICO، نمونه‌های مختلف تصویر در ابعاد مختلف در فایل قرار گرفته است که هر کدام از این تصاویر ابعاد متفاوتی نسبت به دیگران دارد.
