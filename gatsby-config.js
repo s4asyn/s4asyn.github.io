@@ -30,6 +30,8 @@ module.exports = {
                         resolve: `gatsby-remark-images`,
                         options: {
                             maxWidth: 1035,
+                            linkImagesToOriginal: false,
+                            // showCaptions: true,
                         },
                     },
                     {
@@ -68,8 +70,11 @@ module.exports = {
                     require('postcss-nested'),
                     ...(process.env.NODE_ENV === 'production'
                         ? [
-                              require(`autoprefixer`),
-                              require(`postcss-preset-env`)({ stage: 2 }),
+                              require(`postcss-preset-env`)({
+                                  // autoprefxer: {}
+                                  stage: 2,
+                                  // features: {},
+                              }),
                               require(`cssnano`),
                           ]
                         : []),
