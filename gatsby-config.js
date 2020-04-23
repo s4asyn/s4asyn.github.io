@@ -33,6 +33,18 @@ module.exports = {
                         },
                     },
                     {
+                        resolve: `gatsby-remark-autolink-headers`,
+                        options: {
+                            // offsetY: `100`,
+                            icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.5 13a4 4 0 01-3.5 6h-4a4 4 0 110-8h1a1 1 0 000-2h-1a6 6 0 100 12h4a6 6 0 005.2-9 1 1 0 10-1.7 1zm-15-2A4 4 0 018 5h4a4 4 0 110 8h-1a1 1 0 000 2h1a6 6 0 100-12H8a6 6 0 00-5.2 9 1 1 0 101.7-1z"/></svg>`,
+                            className: `autolink-hdrs`,
+                            // maintainCase: true,
+                            removeAccents: true,
+                            isIconAfterHeader: true,
+                            elements: [`h2`, `h5`],
+                        },
+                    },
+                    {
                         resolve: `gatsby-remark-prismjs`,
                         options: {
                             inlineCodeMarker: '>',

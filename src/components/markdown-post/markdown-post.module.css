@@ -26,7 +26,23 @@
         @apply underline;
     }
 
-    /* code syntax highlighting */
+    /* autolink-headers: start */
+    h2,
+    h3,
+    h4,
+    h5 {
+        @apply flex;
+
+        & > :global(a.autolink-hdrs) > svg {
+            @apply inline-block;
+            @apply mis-2;
+            @apply h-4 w-4;
+            @apply fill-current text-secondary;
+        }
+    }
+    /* autolink-headers: end */
+
+    /* prismjs: start */
     code[class*='language-'],
     pre[class*='language-'] {
         direction: ltr;
@@ -64,5 +80,6 @@
     :global(.gatsby-highlight .copy-button:active) {
         @apply bg-yellow-200;
     }
+    /* prismjs: end */
 }
 /*! purgecss end ignore */
