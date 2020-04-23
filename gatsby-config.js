@@ -57,7 +57,13 @@ module.exports = {
             resolve: 'gatsby-plugin-postcss',
             options: {
                 postCssPlugins: [
-                    require(`postcss-import`),
+                    require(`postcss-import`)({
+                        plugins: [
+                            require('stylelint')({
+                                /* options */
+                            }),
+                        ],
+                    }),
                     require(`tailwindcss`)(`./tailwind.config.js`),
                     require('postcss-nested'),
                     ...(process.env.NODE_ENV === 'production'
@@ -67,6 +73,9 @@ module.exports = {
                               require(`cssnano`),
                           ]
                         : []),
+                    require('postcss-reporter')({
+                        clearReportedMessages: true,
+                    }),
                 ],
             },
         },

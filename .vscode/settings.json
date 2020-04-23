@@ -9,5 +9,13 @@
     "eslint.enable": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
+    "prettier.disableLanguages": ["css"],
+    "css.validate": false, // Disable css built-in lint
+    "stylelint.enable": true, // Enable sytlelint
+    "[css]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll.stylelint": true
+        }
+    },
     "debug.node.autoAttach": "on"
 }
