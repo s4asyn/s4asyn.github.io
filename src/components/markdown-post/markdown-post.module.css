@@ -4,7 +4,11 @@
     @apply px-2;
     @apply text-primary;
 
+    unicode-bidi: bidi-override;
+
     p {
+        text-indent: 1rem;
+
         @apply leading-relaxed;
         @apply pt-4;
         @apply text-justify;
@@ -22,8 +26,21 @@
         @apply pt-5;
     }
 
+    h4 {
+        @apply font-semibold;
+        @apply text-lg;
+        @apply pt-5;
+    }
+
     a {
         @apply underline;
+    }
+
+    ul {
+        @apply list-disc;
+        @apply pis-10;
+
+        text-indent: 0.5rem;
     }
 
     /* autolink-headers: start */
@@ -36,7 +53,7 @@
         & > :global(a.autolink-hdrs) > svg {
             @apply inline-block;
             @apply mis-2;
-            @apply h-4 w-4;
+            @apply w-4 h-4;
             @apply fill-current text-secondary;
         }
     }
@@ -44,12 +61,23 @@
     /* autolink-headers: end */
 
     /* prismjs: start */
+    code[class*='language-'],
+    pre[class*='language-'] {
+        direction: ltr;
+        unicode-bidi: bidi-override;
+
+        @apply px-1;
+        @apply text-left;
+    }
+
     :global(.gatsby-highlight) {
         @apply relative;
+        @apply shadow-md;
 
         code[class*='language-'],
         pre[class*='language-'] {
             direction: ltr;
+            unicode-bidi: bidi-override;
 
             @apply text-left;
         }
