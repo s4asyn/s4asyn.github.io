@@ -15,19 +15,28 @@ export default ({ data }) => {
             <article>
                 {/* <h4>{data.allMdx.totalCount} Posts</h4> */}
                 {data.allMdx.edges.map(({ node }) => (
-                    <section key={node.id} className="mt-8">
-                        <Link to={node.fields.slug}>
-                            <h3 className="text-2xl font-semibold text-primary">
-                                {node.frontmatter.title}
-                            </h3>
-                        </Link>
-                        <p className="text-secondary italic">
-                            {moment(
-                                node.frontmatter.date,
-                                'DD MMMM, YYYY',
-                            ).format('jYYYY/jMM/jDD')}
-                        </p>
-                        <p className="text-primary">{node.frontmatter.desc}</p>
+                    <section
+                        key={node.id}
+                        className="mt-8 md:flex md:items-center "
+                    >
+                        <div>
+                            <p className="inline-block pt-2 text-sm italic text-secondary">
+                                {moment(
+                                    node.frontmatter.date,
+                                    'DD MMMM, YYYY',
+                                ).format('jYYYY/jMM/jDD')}
+                            </p>
+                        </div>
+                        <div className="pis-6 pie-6">
+                            <Link to={node.fields.slug}>
+                                <h3 className="text-2xl font-semibold text-primary">
+                                    {node.frontmatter.title}
+                                </h3>
+                            </Link>
+                            <p className="text-secondary">
+                                {node.frontmatter.desc}
+                            </p>
+                        </div>
                     </section>
                 ))}
             </article>

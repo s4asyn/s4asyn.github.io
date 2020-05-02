@@ -3,7 +3,7 @@
 @import './fonts.css';
 @import './themes.css';
 @import 'prismjs/themes/prism-okaidia.css';
-@import 'tailwindcss/components';
 
 /*! purgecss end ignore */
+@import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
