@@ -21,9 +21,10 @@ module.exports = {
         country: 'Iran',
     },
     contact: {
-        email: 's4asyn@gmail.com',
+        email: 's4asyn_g_mail',
         twitter: 's_asyn',
         github: 's4asyn',
+        linkedin: 'https://ir.linkedin.com/in/asaiyan',
     },
     foundingDate: '2020',
 };

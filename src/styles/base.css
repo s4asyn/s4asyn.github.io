@@ -7,3 +7,9 @@
 /*! purgecss end ignore */
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+.bidi-en {
+    unicode-bidi: bidi-override;
+    direction: ltr;
+    text-align: left;
+}
