@@ -28,11 +28,11 @@ export default ({ data }) => {
                 <p className="mt-8 text-center text-secondary">
                     برچسب‌های این پست:
                 </p>
-                <ul className="flex justify-around max-w-sm mx-auto mt-4">
+                <ul className="flex justify-around max-w-xs mx-auto mt-4 md:max-w-sm">
                     {post.fields.slugtaglist.map((tag) => (
                         <li
                             key={`tag-${tag.tag}`}
-                            className="z-10 inline-block px-2 mx-2 text-sm border border-2 rounded-full shadow-sm bg-nav text-primary"
+                            className="z-10 inline-block px-2 mx-0 text-sm border border-2 rounded-full shadow-sm bg-nav text-primary"
                         >
                             <Link to={`${tag.slug}`}>#{tag.tag}</Link>
                         </li>

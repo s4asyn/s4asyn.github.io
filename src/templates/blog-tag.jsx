@@ -32,15 +32,15 @@ export default ({ data, pageContext }) => {
                                     {node.frontmatter.title}
                                 </h3>
                             </Link>
-                            <div className="flex">
+                            <div className="md:flex">
                                 <p className="text-secondary">
                                     {node.frontmatter.desc}
                                 </p>
-                                <ul className="flex items-baseline mis-4">
+                                <ul className="flex items-baseline justify-center mt-2 mis-4 md:mt-0 md:justify-start">
                                     {node.fields.slugtaglist.map((tag) => (
                                         <li
                                             key={`${node.frontmatter.title}-${tag.tag}`}
-                                            className="z-10 inline-block px-2 mx-2 text-sm border border-2 rounded-full shadow-sm bg-nav text-primary"
+                                            className="z-10 inline-block px-2 mx-1 text-sm border border-2 rounded-full shadow-sm bg-nav text-primary"
                                         >
                                             <Link to={`${tag.slug}`}>
                                                 #{tag.tag}
