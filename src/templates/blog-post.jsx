@@ -24,6 +24,21 @@ export default ({ data }) => {
                     <MDXRenderer>{post.body}</MDXRenderer>
                 </MDXProvider>
             </MarkdownPost>
+            <div className="mt-16 ">
+                <p className="mt-8 text-center text-secondary">
+                    برچسب‌های این پست:
+                </p>
+                <ul className="flex justify-around max-w-sm mx-auto mt-4">
+                    {post.fields.slugtaglist.map((tag) => (
+                        <li
+                            key={`tag-${tag.tag}`}
+                            className="z-10 inline-block px-2 mx-2 text-sm border border-2 rounded-full shadow-sm bg-nav text-primary"
+                        >
+                            <Link to={`${tag.slug}`}>#{tag.tag}</Link>
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </Layout>
     );
 };
@@ -37,6 +52,13 @@ export const query = graphql`
                 date(formatString: "DD MMMM, YYYY")
                 lang
                 desc
+            }
+            fields {
+                slug
+                slugtaglist {
+                    tag
+                    slug
+                }
             }
         }
     }

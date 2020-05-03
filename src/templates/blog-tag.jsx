@@ -4,12 +4,11 @@ import moment from 'moment-jalaali';
 
 import { Layout } from '#components';
 
-const SeoData = {
-    description: 'فهرست مطالب وبلاگ',
-    title: 'سعید عصائیان',
-};
-
-export default ({ data }) => {
+export default ({ data, pageContext }) => {
+    const SeoData = {
+        description: `فهرست مطالب وبلاگ دارای برچسب "${pageContext.tag}"`,
+        title: 'سعید عصائیان',
+    };
     return (
         <Layout SeoData={SeoData}>
             <article>
@@ -38,18 +37,16 @@ export default ({ data }) => {
                                     {node.frontmatter.desc}
                                 </p>
                                 <ul className="flex items-baseline mis-4">
-                                    {node.fields.slugtaglist.map((tag) => {
-                                        return (
-                                            <li
-                                                key={`${node.frontmatter.title}-${tag.tag}`}
-                                                className="z-10 inline-block px-2 mx-2 text-sm border border-2 rounded-full shadow-sm bg-nav text-primary"
-                                            >
-                                                <Link to={`${tag.slug}`}>
-                                                    #{tag.tag}
-                                                </Link>
-                                            </li>
-                                        );
-                                    })}
+                                    {node.fields.slugtaglist.map((tag) => (
+                                        <li
+                                            key={`${node.frontmatter.title}-${tag.tag}`}
+                                            className="z-10 inline-block px-2 mx-2 text-sm border border-2 rounded-full shadow-sm bg-nav text-primary"
+                                        >
+                                            <Link to={`${tag.slug}`}>
+                                                #{tag.tag}
+                                            </Link>
+                                        </li>
+                                    ))}
                                 </ul>
                             </div>
                         </div>
@@ -61,9 +58,11 @@ export default ({ data }) => {
 };
 
 export const query = graphql`
-    query {
+    query($tag: String!) {
         allMdx(
-            filter: { frontmatter: { published: { eq: "yes" } } }
+            filter: {
+                frontmatter: { tags: { in: [$tag] }, published: { eq: "yes" } }
+            }
             sort: { fields: frontmatter___date, order: DESC }
         ) {
             totalCount
@@ -75,6 +74,7 @@ export const query = graphql`
                         date(formatString: "DD MMMM, YYYY")
                         lang
                         desc
+                        tags
                     }
                     fields {
                         slug
