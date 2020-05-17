@@ -5,7 +5,7 @@ import ThemeSwitcher from './theme-switcher';
 
 /* Start Component */
 const NavBar = () => (
-    <ul className="flex justify-between bg-nav px-4 text-primary">
+    <ul className="flex justify-between px-4 bg-nav text-primary">
         <li>
             <Link to="/">خانه</Link>
         </li>

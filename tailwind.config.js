@@ -8,6 +8,11 @@ module.exports = {
             backgroundColor: {
                 body: 'var(--color-bg-body)',
                 nav: 'var(--color-bg-nav)',
+                bq: 'var(--color-bg-bq)',
+            },
+            borderColor: {
+                primary: 'var(--color-border-primary)',
+                secondary: 'var(--color-border-secondary)',
             },
             textColor: {
                 primary: 'var(--color-text-primary)',

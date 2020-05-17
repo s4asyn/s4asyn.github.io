@@ -40,7 +40,7 @@ export default ({ data, pageContext }) => {
                                     {node.fields.slugtaglist.map((tag) => (
                                         <li
                                             key={`${node.frontmatter.title}-${tag.tag}`}
-                                            className="z-10 inline-block px-2 mx-1 text-sm border border-2 rounded-full shadow-sm bg-nav text-primary"
+                                            className="z-10 inline-block px-2 mx-1 text-sm border border-2 rounded-full shadow-sm border-secondary bg-nav text-primary"
                                         >
                                             <Link to={`${tag.slug}`}>
                                                 #{tag.tag}

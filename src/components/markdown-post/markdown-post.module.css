@@ -43,6 +43,12 @@
         text-indent: 0.5rem;
     }
 
+    blockquote {
+        @apply p-4 mx-8;
+        @apply shadow-md bg-bq;
+        @apply border border-0 border-is-4 border-secondary;
+    }
+
     /* autolink-headers: start */
     h2,
     h3,
@@ -59,6 +65,16 @@
     }
 
     /* autolink-headers: end */
+
+    /* img: start */
+    :global(.gatsby-resp-image-wrapper) {
+        img {
+            @apply border border-2 border-secondary;
+            @apply shadow-md;
+        }
+    }
+
+    /* img: end */
 
     /* prismjs: start */
     code[class*='language-'],

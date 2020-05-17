@@ -36,13 +36,19 @@
 .body-theme-light {
     --color-bg-body: #fff;
     --color-bg-nav: #aaa;
+    --color-bg-bq: #ccc;
+    --color-border-primary: #333;
+    --color-border-secondary: #888;
     --color-text-primary: #000;
     --color-text-secondary: #444;
 }
 
 .body-theme-dark {
     --color-bg-body: #000;
-    --color-bg-nav: #333;
+    --color-bg-nav: #444;
+    --color-bg-bq: #222;
+    --color-border-primary: #bbb;
+    --color-border-secondary: #888;
     --color-text-primary: #fff;
     --color-text-secondary: #aaa;
 }

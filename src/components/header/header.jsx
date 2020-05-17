@@ -5,13 +5,13 @@ import NavBar from './navbar';
 
 /* Start Component */
 const Header = ({ PageTitle, PageSubtitle }) => (
-    <header className="border-b-2 border-gray-700">
+    <header className="border-b-2 border-primary">
         <NavBar />
         <div className="pt-32 pb-16 text-center">
-            <h1 className="text-4xl text-primary font-extrabold">
+            <h1 className="text-4xl font-extrabold text-primary">
                 {PageTitle}
             </h1>
-            <div className="text-xl text-secondary font-bold">
+            <div className="text-xl font-bold text-secondary">
                 {PageSubtitle}
             </div>
         </div>

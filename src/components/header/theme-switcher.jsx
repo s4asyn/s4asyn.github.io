@@ -13,7 +13,7 @@ const ThemSwitcher = () => {
             {({ theme, toggleTheme }) => (
                 <label
                     htmlFor="toogleTheme"
-                    className="relative flex items-center justify-center cursor-pointer pt-1"
+                    className="relative flex items-center justify-center pt-1 cursor-pointer"
                 >
                     <input
                         id="toogleTheme"
@@ -23,7 +23,7 @@ const ThemSwitcher = () => {
                         checked={theme === 'dark'}
                         readOnly
                     />
-                    <div className="w-10 h-4 bg-body rounded-full shadow-inner"></div>
+                    <div className="w-10 h-4 rounded-full shadow-inner bg-body"></div>
                     <div
                         className={`${ThemSwitcherStyle.toggleDot} absolute w-5 h-5 bg-white rounded-full shadow inset-y-0 left-0`}
                     >

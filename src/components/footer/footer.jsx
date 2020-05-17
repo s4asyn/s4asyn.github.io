@@ -11,12 +11,12 @@ import Configs from '#configs';
 const Footer = () => (
     <ContextConsumer>
         {({ language }) => (
-            <footer className="mt-12 mb-4 border-t-2 border-gray-600">
+            <footer className="mt-12 mb-4 border-t-2 border-primary">
                 <p className="mt-2 text-center text-secondary">
                     مطالب این وبلاگ تحت مجوز{' '}
                     <a
                         href="https://creativecommons.org/licenses/by-sa/4.0/deed.fa"
-                        className="inline-block border-b-2 border-gray-300"
+                        className="inline-block border-b-2 border-secondary"
                     >
                         {' '}
                         اختیار-اشتراک مشابه 4.0 بین‌المللی{' '}
@@ -27,7 +27,7 @@ const Footer = () => (
                 <p className="mt-1 text-center text-secondary">
                     از راه‌های زیر می‌توانیم در ارتباط باشیم :)
                 </p>
-                <ul className="flex justify-around w-full px-24 mt-4">
+                <ul className="flex justify-center w-full px-24 mt-4 space-x-10 space-x-reverse">
                     <li>
                         <a href={`mailto:${Configs.metadata.contact.email}`}>
                             <svg
