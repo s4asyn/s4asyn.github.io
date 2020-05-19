@@ -34,7 +34,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     }
 };
 
-exports.createPages = async ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions, reporter }) => {
     const { createPage } = actions;
     /*
     createPage({
@@ -55,34 +55,6 @@ exports.createPages = async ({ graphql, actions }) => {
                     node {
                         fields {
                             slug
-                        }
-                    }
-                }
-            }
-        }
-    `);
-    if (result.errors) {
-        reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query');
-    }
-
-    result.data.allMdx.edges.forEach(({ node }) => {
-        createPage({
-            path: node.fields.slug,
-            component: path.resolve(`./src/templates/blog-post.jsx`),
-            context: {
-                // Data passed to context is available
-                // in page queries as GraphQL variables.
-                slug: node.fields.slug,
-            },
-        });
-    });
-
-    const tagResult = await graphql(`
-        query {
-            allMdx(filter: { frontmatter: { published: { eq: "yes" } } }) {
-                edges {
-                    node {
-                        fields {
                             slugtaglist {
                                 tag
                                 slug
@@ -93,22 +65,33 @@ exports.createPages = async ({ graphql, actions }) => {
             }
         }
     `);
-    if (tagResult.errors) {
-        reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query (tags)');
+    if (result.errors) {
+        reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query');
     }
+
     const tagList = new Set();
-    tagResult.data.allMdx.edges.forEach(({ node }) => {
-        node.fields.slugtaglist.forEach((slugtag) => {
-            if (!tagList.has(slugtag.tag)) {
-                tagList.add(slugtag.tag);
-                createPage({
-                    path: slugtag.slug,
-                    component: path.resolve(`./src/templates/blog-tag.jsx`),
-                    context: {
-                        tag: slugtag.tag,
-                    },
-                });
-            }
+    result.data.allMdx.edges.forEach(({ node }) => {
+        createPage({
+            path: node.fields.slug,
+            component: path.resolve(`./src/templates/blog-post.jsx`),
+            context: {
+                // Data passed to context is available
+                // in page queries as GraphQL variables.
+                slug: node.fields.slug,
+            },
         });
+        node.fields.slugtaglist &&
+            node.fields.slugtaglist.forEach((slugtag) => {
+                if (!tagList.has(slugtag.tag)) {
+                    tagList.add(slugtag.tag);
+                    createPage({
+                        path: slugtag.slug,
+                        component: path.resolve(`./src/templates/blog-tag.jsx`),
+                        context: {
+                            tag: slugtag.tag,
+                        },
+                    });
+                }
+            });
     });
 };
