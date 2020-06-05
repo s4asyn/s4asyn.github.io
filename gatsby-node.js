@@ -41,6 +41,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         component: path.resolve(`./src/templates/blog-index.jsx`),
         context: { lang: 'fa' },
     });
+    createPage({
+        path: '/fa/library',
+        component: path.resolve(`./src/templates/library.jsx`),
+        context: { lang: 'fa' },
+    });
     /*
     createPage({
         path: '/en/blog',

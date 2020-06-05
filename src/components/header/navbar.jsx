@@ -10,7 +10,13 @@ const NavBar = () => (
             <Link to="/">خانه</Link>
         </li>
         <li>
+            <Link to="/fa/blog">بلاگ</Link>
+        </li>
+        <li>
             <ThemeSwitcher />
+        </li>
+        <li>
+            <Link to="/fa/library">کتاب‌خانه</Link>
         </li>
         <li>
             <Link to="/about">درباره</Link>

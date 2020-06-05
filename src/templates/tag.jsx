@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import { Layout, BlogCard } from '#components';
+import { Layout, BlogCard, BookCard } from '#components';
 
 export default ({ data, pageContext }) => {
     const SeoData = {
@@ -11,6 +11,16 @@ export default ({ data, pageContext }) => {
     return (
         <Layout SeoData={SeoData}>
             <article>
+                <section>
+                    <h4 className="mt-8 text-2xl font-semibold text-primary">
+                        نتایج در کتابخانه:
+                    </h4>
+                    <div className="flex flex-wrap justify-around">
+                        {data.library.edges.map(({ node }) => (
+                            <BookCard key={node.id} BookNode={node} />
+                        ))}
+                    </div>
+                </section>
                 <section>
                     <h4 className="mt-8 text-2xl font-semibold text-primary">
                         نتایج در وبلاگ:
@@ -40,6 +50,23 @@ export const query = graphql`
             edges {
                 node {
                     ...BlogNode
+                }
+            }
+        }
+        library: allMdx(
+            filter: {
+                frontmatter: {
+                    tags: { in: [$tag] }
+                    published: { eq: "yes" }
+                    type: { eq: "book" }
+                }
+            }
+            sort: { fields: frontmatter___date, order: DESC }
+        ) {
+            totalCount
+            edges {
+                node {
+                    ...BookNode
                 }
             }
         }

@@ -6,7 +6,7 @@ import { TagList } from '../tags';
 
 /* Start Component */
 const BlogCard = ({ BlogNode }) => (
-    <dev className="mt-8 md:flex md:items-center ">
+    <div className="mt-8 md:flex md:items-center ">
         <div>
             <p className="inline-block pt-2 text-sm italic text-secondary">
                 {moment(BlogNode.frontmatter.date, 'DD MMMM, YYYY').format(
@@ -25,7 +25,7 @@ const BlogCard = ({ BlogNode }) => (
                 <TagList Tags={BlogNode.fields.slugtaglist} />
             </div>
         </div>
-    </dev>
+    </div>
 );
 
 export default BlogCard;

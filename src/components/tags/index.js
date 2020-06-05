@@ -1,3 +1,4 @@
 import TagList from './tag-list';
+import Stars from './stars';
 
-export { TagList };
+export { Stars, TagList };

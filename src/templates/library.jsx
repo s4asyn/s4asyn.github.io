@@ -1,21 +1,19 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import { Layout, BlogCard } from '#components';
-
-const SeoData = {
-    description: 'فهرست مطالب وبلاگ',
-    title: 'سعید عصائیان',
-};
+import { Layout, BookCard } from '#components';
 
 export default ({ data }) => {
+    const SeoData = {
+        title: `فهرست کتاب‌خانه`,
+        description: `تعداد کتاب: ${data.allMdx.totalCount}`,
+    };
     return (
         <Layout SeoData={SeoData}>
             <article>
-                <section>
-                    {/* <h4>{data.allMdx.totalCount} Posts</h4> */}
+                <section className="flex flex-wrap justify-around">
                     {data.allMdx.edges.map(({ node }) => (
-                        <BlogCard key={node.id} BlogNode={node} />
+                        <BookCard key={node.id} BookNode={node} />
                     ))}
                 </section>
             </article>
@@ -24,17 +22,21 @@ export default ({ data }) => {
 };
 
 export const query = graphql`
-    query {
+    query($lang: String!) {
         allMdx(
             filter: {
-                frontmatter: { published: { eq: "yes" }, type: { eq: "blog" } }
+                frontmatter: {
+                    published: { eq: "yes" }
+                    lang: { eq: $lang }
+                    type: { eq: "book" }
+                }
             }
             sort: { fields: frontmatter___date, order: DESC }
         ) {
             totalCount
             edges {
                 node {
-                    ...BlogNode
+                    ...BookNode
                 }
             }
         }
