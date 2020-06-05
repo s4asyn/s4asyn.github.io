@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 import moment from 'moment-jalaali';
 /* import Subcomponent */
+import { TagList } from '../tags';
 
 /* Start Component */
 const BlogCard = ({ BlogNode }) => (
@@ -21,16 +22,7 @@ const BlogCard = ({ BlogNode }) => (
             </Link>
             <div className="md:flex">
                 <p className="text-secondary">{BlogNode.frontmatter.desc}</p>
-                <ul className="flex items-baseline justify-center mt-2 mis-4 md:mt-0 md:justify-start">
-                    {BlogNode.fields.slugtaglist.map((tag) => (
-                        <li
-                            key={`${BlogNode.frontmatter.title}-${tag.tag}`}
-                            className="z-10 inline-block px-2 mx-1 text-sm border border-2 rounded-full shadow-sm bg-nav text-primary"
-                        >
-                            <Link to={`${tag.slug}`}>#{tag.tag}</Link>
-                        </li>
-                    ))}
-                </ul>
+                <TagList Tags={BlogNode.fields.slugtaglist} />
             </div>
         </div>
     </dev>
@@ -49,10 +41,7 @@ export const query = graphql`
         }
         fields {
             slug
-            slugtaglist {
-                tag
-                slug
-            }
+            ...Tags
         }
     }
 `;

@@ -44,9 +44,29 @@
     }
 
     blockquote {
-        @apply p-4 mx-8;
+        @apply p-4 mx-8 mt-6;
         @apply shadow-md bg-bq;
         @apply border border-0 border-is-4 border-secondary;
+
+        & :global(p) {
+            @apply text-primary;
+
+            text-indent: 0;
+        }
+
+        & > :global(cite) {
+            @apply block;
+            @apply mt-2;
+            @apply mis-16;
+            @apply italic;
+            @apply text-secondary;
+
+            &:global(::before) {
+                content: '-- ';
+
+                @apply text-secondary;
+            }
+        }
     }
 
     /* autolink-headers: start */

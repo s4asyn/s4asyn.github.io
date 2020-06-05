@@ -4,7 +4,7 @@ import moment from 'moment-jalaali';
 import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-import { Layout, MarkdownPost } from '#components';
+import { Layout, MarkdownPost, TagList } from '#components';
 
 const shortcodes = { Link }; // Provide common components here
 
@@ -28,16 +28,7 @@ export default ({ data }) => {
                 <p className="mt-8 text-center text-secondary">
                     برچسب‌های این پست:
                 </p>
-                <ul className="flex justify-center max-w-xs mx-auto mt-4 space-x-10 space-x-reverse md:max-w-sm">
-                    {post.fields.slugtaglist.map((tag) => (
-                        <li
-                            key={`tag-${tag.tag}`}
-                            className="z-10 inline-block px-2 mx-0 text-sm border border-2 rounded-full shadow-sm border-secondary bg-nav text-primary"
-                        >
-                            <Link to={`${tag.slug}`}>#{tag.tag}</Link>
-                        </li>
-                    ))}
-                </ul>
+                <TagList Tags={post.fields.slugtaglist} />
             </div>
         </Layout>
     );
@@ -55,10 +46,7 @@ export const query = graphql`
             }
             fields {
                 slug
-                slugtaglist {
-                    tag
-                    slug
-                }
+                ...Tags
             }
         }
     }
