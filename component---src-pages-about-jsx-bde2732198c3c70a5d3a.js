@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{bT9l:function(e,t,n){"use strict";n.r(t);var a=n("q1tI"),c=n.n(a),i=n("Kvkj"),r={description:"سعید عصائیان",title:"درباره‌ی من"};t.default=function(){return c.a.createElement(i.c,{SeoData:r},c.a.createElement("article",null))}}}]);
+//# sourceMappingURL=component---src-pages-about-jsx-bde2732198c3c70a5d3a.js.map
