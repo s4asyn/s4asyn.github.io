@@ -36,12 +36,12 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
     const { createPage } = actions;
-    /*
     createPage({
         path: '/fa/blog',
         component: path.resolve(`./src/templates/blog-index.jsx`),
         context: { lang: 'fa' },
     });
+    /*
     createPage({
         path: '/en/blog',
         component: path.resolve(`./src/templates/blog-index.jsx`),
@@ -86,7 +86,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                     tagList.add(slugtag.tag);
                     createPage({
                         path: slugtag.slug,
-                        component: path.resolve(`./src/templates/blog-tag.jsx`),
+                        component: path.resolve(`./src/templates/tag.jsx`),
                         context: {
                             tag: slugtag.tag,
                         },
