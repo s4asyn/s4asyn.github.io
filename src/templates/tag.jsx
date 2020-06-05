@@ -6,13 +6,16 @@ import { Layout, BlogCard } from '#components';
 export default ({ data, pageContext }) => {
     const SeoData = {
         title: `فهرست مطالب دارای برچسب "${pageContext.tag}"`,
-        description: `تعداد نتایج: ${data.allMdx.totalCount}`,
+        description: `تعداد نتایج: ${data.blog.totalCount}`,
     };
     return (
         <Layout SeoData={SeoData}>
             <article>
                 <section>
-                    {data.allMdx.edges.map(({ node }) => (
+                    <h4 className="mt-8 text-2xl font-semibold text-primary">
+                        نتایج در وبلاگ:
+                    </h4>
+                    {data.blog.edges.map(({ node }) => (
                         <BlogCard key={node.id} BlogNode={node} />
                     ))}
                 </section>
@@ -23,9 +26,13 @@ export default ({ data, pageContext }) => {
 
 export const query = graphql`
     query($tag: String!) {
-        allMdx(
+        blog: allMdx(
             filter: {
-                frontmatter: { tags: { in: [$tag] }, published: { eq: "yes" } }
+                frontmatter: {
+                    tags: { in: [$tag] }
+                    published: { eq: "yes" }
+                    type: { eq: "blog" }
+                }
             }
             sort: { fields: frontmatter___date, order: DESC }
         ) {

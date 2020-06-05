@@ -15,7 +15,7 @@ const BlogCard = ({ BlogNode }) => (
         </div>
         <div className="pis-6 pie-6">
             <Link to={BlogNode.fields.slug}>
-                <h3 className="text-2xl font-semibold text-primary">
+                <h3 className="text-xl font-semibold text-primary">
                     {BlogNode.frontmatter.title}
                 </h3>
             </Link>

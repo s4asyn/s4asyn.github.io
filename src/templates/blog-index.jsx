@@ -25,7 +25,11 @@ export const query = graphql`
     query($lang: String!) {
         allMdx(
             filter: {
-                frontmatter: { published: { eq: "yes" }, lang: { eq: $lang } }
+                frontmatter: {
+                    published: { eq: "yes" }
+                    lang: { eq: $lang }
+                    type: { eq: "blog" }
+                }
             }
             sort: { fields: frontmatter___date, order: DESC }
         ) {
