@@ -7,17 +7,23 @@ import Header from '../header';
 import Footer from '../footer';
 import Main from '../main';
 
-const Layout = ({ SeoData, children }) => (
+const Layout = ({ SeoData, justSeo = false, children }) => (
     <>
         <HtmlHead />
         <SEO SeoData={SeoData} />
-        <div className="antialiased max-w-full mx-4 lg:max-w-4xl lg:mx-auto">
-            <Header
-                PageTitle={SeoData.title}
-                PageSubtitle={SeoData.description}
-            />
-            <Main>{children}</Main>
-            <Footer />
+        <div className="antialiased">
+            {justSeo ? (
+                <div>{children}</div>
+            ) : (
+                <div className="max-w-full mx-4 lg:max-w-4xl lg:mx-auto">
+                    <Header
+                        PageTitle={SeoData.title}
+                        PageSubtitle={SeoData.description}
+                    />
+                    <Main>{children}</Main>
+                    <Footer />
+                </div>
+            )}
         </div>
     </>
 );

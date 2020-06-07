@@ -1,4 +1,9 @@
 import TagList from './tag-list';
 import Stars from './stars';
+import SocialLinks from './social-links';
 
-export { Stars, TagList };
+export {
+    SocialLinks,
+    Stars,
+    TagList
+};

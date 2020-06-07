@@ -8,6 +8,7 @@ module.exports = {
                 root: './',
                 aliases: {
                     '#components': './src/components/',
+                    '#styles': './src/styles',
                     '#states': './src/states/',
                     '#configs': './configs/',
                     '#static': './static/',
@@ -70,13 +71,13 @@ module.exports = {
                     require('postcss-nested'),
                     ...(process.env.NODE_ENV === 'production'
                         ? [
-                              require(`postcss-preset-env`)({
-                                  // autoprefxer: {}
-                                  stage: 2,
-                                  // features: {},
-                              }),
-                              require(`cssnano`),
-                          ]
+                            require(`postcss-preset-env`)({
+                                // autoprefxer: {}
+                                stage: 2,
+                                // features: {},
+                            }),
+                            require(`cssnano`),
+                        ]
                         : []),
                     require('postcss-reporter')({
                         clearReportedMessages: true,
