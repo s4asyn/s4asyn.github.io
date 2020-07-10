@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{Dtc0:function(e,t,n){"use strict";n.r(t),n.d(t,"query",(function(){return o}));var a=n("q1tI"),r=n.n(a),c=n("Kvkj"),l={description:"فهرست مطالب وبلاگ",title:"سعید عصائیان"};t.default=function(e){var t=e.data;return r.a.createElement(c.c,{SeoData:l},r.a.createElement("article",null,r.a.createElement("section",null,t.allMdx.edges.map((function(e){var t=e.node;return r.a.createElement(c.a,{key:t.id,BlogNode:t})})))))};var o="974428664"}}]);
-//# sourceMappingURL=component---src-pages-index-jsx-a316ba226b5d07011b16.js.map
