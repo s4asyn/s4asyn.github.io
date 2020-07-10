@@ -14,6 +14,14 @@
         @apply text-justify;
     }
 
+    em {
+        @apply italic;
+    }
+
+    strong {
+        @apply font-bold;
+    }
+
     h2 {
         @apply font-semibold;
         @apply text-2xl;
@@ -46,7 +54,7 @@
     blockquote {
         @apply p-4 mx-8 mt-6;
         @apply shadow-md bg-bq;
-        @apply border border-0 border-is-4 border-secondary;
+        @apply border-0 border-is-4 border-secondary;
 
         & :global(p) {
             @apply text-primary;
@@ -89,7 +97,7 @@
     /* img: start */
     :global(.gatsby-resp-image-wrapper) {
         img {
-            @apply border border-2 border-secondary;
+            @apply border-2 border-secondary;
             @apply shadow-md;
         }
     }
