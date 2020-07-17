@@ -11,7 +11,7 @@ export default () => {
     return (
         <Layout SeoData={SeoData}>
             <article>
-                <section className="leading-relaxed text-primary">
+                <section className="leading-relaxed text-justify text-primary">
                     <p className="pt-4">
                         من سعید عصائیان هستم. کارشناسی مهندسی کامپیوتر-نرم‌افزار
                         و کارشناسی ارشد فناوری اطلاعات-شبکه‌های کامپیوتری دارم و
