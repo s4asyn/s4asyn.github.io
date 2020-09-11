@@ -8,7 +8,7 @@ const TagList = ({ Tags }) => (
         {Tags.map((tag) => (
             <li
                 key={tag.tag}
-                className="z-10 inline-block px-2 m-1 text-sm border border-2 rounded-full shadow-sm bg-nav text-primary"
+                className="z-10 inline-block px-2 m-1 text-sm border-2 rounded-full shadow-sm bg-nav text-primary"
             >
                 <Link to={`${tag.slug}`}>#{tag.tag}</Link>
             </li>

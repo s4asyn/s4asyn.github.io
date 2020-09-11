@@ -22,6 +22,6 @@
             }
         ],
         "block-no-empty": null,
-        "unit-whitelist": ["%", "rem", "s"]
+        "unit-allowed-list": ["%", "rem", "s"]
     }
 }
