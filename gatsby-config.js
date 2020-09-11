@@ -56,6 +56,7 @@ module.exports = {
                 ],
             },
         },
+        `gatsby-plugin-styled-components`,
         {
             resolve: 'gatsby-plugin-postcss',
             options: {
