@@ -3,7 +3,7 @@ import React from 'react';
 
 /* Start Component */
 const Stars = ({ rate }) => (
-    <ul className="flex flex-no-wrap">
+    <ul className="flex flex-nowrap">
         {[...Array(5).keys()].map((i) => (
             <li key={i}>
                 <svg

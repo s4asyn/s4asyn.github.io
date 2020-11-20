@@ -33,7 +33,4 @@ module.exports = {
         require('tailwindcss-logical'),
         require('tailwindcss-dir')(),
     ],
-    future: {
-        removeDeprecatedGapUtilities: true,
-    },
 };

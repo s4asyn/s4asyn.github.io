@@ -62,20 +62,14 @@ module.exports = {
                 postCssPlugins: [
                     require(`postcss-import`)({
                         plugins: [
-                            require('stylelint')({
-                                /* options */
-                            }),
+                            require('stylelint'),
                         ],
                     }),
                     require(`tailwindcss`)(`./tailwind.config.js`),
                     require('postcss-nested'),
                     ...(process.env.NODE_ENV === 'production'
                         ? [
-                            require(`postcss-preset-env`)({
-                                // autoprefxer: {}
-                                stage: 2,
-                                // features: {},
-                            }),
+                            require('autoprefixer'),
                             require(`cssnano`),
                         ]
                         : []),
