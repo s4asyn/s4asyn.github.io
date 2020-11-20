@@ -1,2 +1,2 @@
 (window.webpackJsonp=window.webpackJsonp||[]).push([[5],{lWDa:function(e,t,a){"use strict";a.r(t),a.d(t,"query",(function(){return o}));var n=a("q1tI"),r=a.n(n),l=a("Kvkj");t.default=function(e){var t=e.data,a={title:"فهرست مطالب وبلاگ",description:"تعداد مطلب: "+t.allMdx.totalCount};return r.a.createElement(l.c,{SeoData:a},r.a.createElement("article",null,r.a.createElement("section",null,t.allMdx.edges.map((function(e){var t=e.node;return r.a.createElement(l.a,{key:t.id,BlogNode:t})})))))};var o="1795256718"}}]);
-//# sourceMappingURL=component---src-templates-blog-index-jsx-e4d82d1850e889e8fce8.js.map
+//# sourceMappingURL=component---src-templates-blog-index-jsx-42baba0cd54b076382d2.js.map
