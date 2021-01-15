@@ -69,8 +69,7 @@ module.exports = {
                     require('postcss-nested'),
                     ...(process.env.NODE_ENV === 'production'
                         ? [
-                            require('autoprefixer'),
-                            require(`cssnano`),
+                            require('autoprefixer')
                         ]
                         : []),
                     require('postcss-reporter')({
