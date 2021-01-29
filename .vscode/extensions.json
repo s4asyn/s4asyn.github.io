@@ -5,19 +5,20 @@
     "recommendations": [
         "dbaeumer.vscode-eslint",
         "christian-kohler.path-intellisense",
-        "DavidAnson.vscode-markdownlint",
+        "davidanson.vscode-markdownlint",
         "esbenp.prettier-vscode",
         "christian-kohler.npm-intellisense",
         "eg2.vscode-npm-script",
         "pflannery.vscode-versionlens",
         "msjsdiag.debugger-for-chrome",
-        "CoenraadS.bracket-pair-colorizer-2",
+        "coenraads.bracket-pair-colorizer-2",
         "naumovs.color-highlight",
         "mkxml.vscode-filesize",
-        "DotJoshJohnson.xml",
+        "dotjoshjohnson.xml",
         "bradlc.vscode-tailwindcss",
         "stylelint.vscode-stylelint",
-        "heybourn.headwind"
+        "heybourn.headwind",
+        "eamodio.gitlens"
     ],
     // List of extensions recommended by VS Code that should not be recommended for users of this workspace.
     "unwantedRecommendations": []
