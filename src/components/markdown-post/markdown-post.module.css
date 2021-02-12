@@ -47,8 +47,36 @@
     ul {
         @apply list-disc;
         @apply pis-10;
+        @apply text-justify;
 
         text-indent: 0.5rem;
+    }
+
+    table {
+        @apply w-5/6 mx-auto table-auto;
+        @apply border border-collapse border-gray-700;
+
+        & thead {
+            @apply bg-gray-300 border border-gray-700;
+
+            & tr > th {
+                @apply border border-gray-700;
+            }
+        }
+
+        & tbody {
+            & tr:nth-child(odd) {
+                @apply bg-gray-50;
+            }
+
+            & tr:nth-child(even) {
+                @apply bg-gray-100;
+            }
+
+            & td {
+                @apply border border-gray-700;
+            }
+        }
     }
 
     blockquote {
