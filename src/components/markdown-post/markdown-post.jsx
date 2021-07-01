@@ -4,7 +4,7 @@ import Clipboard from 'clipboard';
 /* import Subcomponent */
 
 /* import Style*/
-import MarkDownStyle from './markdown-post.module.css';
+import { postBody } from './markdown-post.module.css';
 
 /* Start Component */
 const MarkDown = ({ children }) => {
@@ -31,7 +31,7 @@ const MarkDown = ({ children }) => {
     useEffect(() => {
         createCopyButton();
     }, []);
-    return <article className={MarkDownStyle.postBody}>{children}</article>;
+    return <article className={postBody}>{children}</article>;
 };
 
 MarkDown.propTypes = {

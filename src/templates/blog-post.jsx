@@ -8,7 +8,7 @@ import { Layout, MarkdownPost, TagList } from '#components';
 
 const shortcodes = { Link }; // Provide common components here
 
-export default ({ data }) => {
+export default function blogPost({ data }) {
     const post = data.mdx;
     const SeoData = {
         description: post.frontmatter.desc,
@@ -32,7 +32,7 @@ export default ({ data }) => {
             </div>
         </Layout>
     );
-};
+}
 
 export const query = graphql`
     query($slug: String!) {

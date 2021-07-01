@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { ContextConsumer } from '#states';
 
 /* import Style*/
-import ThemSwitcherStyle from './theme-switcher.module.css';
+import { icon, toggleDot } from './theme-switcher.module.css';
 
 /* Start Component */
 const ThemSwitcher = () => {
@@ -25,13 +25,13 @@ const ThemSwitcher = () => {
                     />
                     <div className="w-10 h-4 rounded-full shadow-inner bg-body"></div>
                     <div
-                        className={`${ThemSwitcherStyle.toggleDot} absolute w-5 h-5 bg-white rounded-full shadow inset-y-0 left-0`}
+                        className={`${toggleDot} absolute w-5 h-5 bg-white rounded-full shadow inset-y-0 left-0`}
                     >
                         <span
                             className={`${theme === 'light' ? '' : 'hidden'}`}
                         >
                             <svg
-                                className={`${ThemSwitcherStyle.icon} w-4 h-4 text-yellow-800 fill-current`}
+                                className={`${icon} w-4 h-4 text-yellow-800 fill-current`}
                                 viewBox="0 0 2267 2267"
                                 xmlns="http://www.w3.org/2000/svg"
                             >

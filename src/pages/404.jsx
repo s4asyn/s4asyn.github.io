@@ -7,7 +7,7 @@ const SeoData = {
     title: 'خطای 404',
 };
 
-export default () => {
+export default function default404() {
     return (
         <Layout SeoData={SeoData}>
             <article>
@@ -45,4 +45,4 @@ export default () => {
             </article>
         </Layout>
     );
-};
+}

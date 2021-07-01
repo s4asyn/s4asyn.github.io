@@ -3,11 +3,9 @@ import propTypes from 'prop-types';
 /* import Subcomponent */
 
 /* import style */
-import Style from './main.module.css';
+import { mainStyle } from './main.module.css';
 
-const Main = ({ children }) => (
-    <main className={Style.mainStyle}>{children}</main>
-);
+const Main = ({ children }) => <main className={mainStyle}>{children}</main>;
 
 Main.propTypes = {
     children: propTypes.node.isRequired,

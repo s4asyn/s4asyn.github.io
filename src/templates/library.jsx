@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 
 import { Layout, BookCard } from '#components';
 
-export default ({ data }) => {
+export default function library({ data }) {
     const SeoData = {
         title: `فهرست کتاب‌خانه`,
         description: `تعداد کتاب: ${data.allMdx.totalCount}`,
@@ -19,7 +19,7 @@ export default ({ data }) => {
             </article>
         </Layout>
     );
-};
+}
 
 export const query = graphql`
     query($lang: String!) {

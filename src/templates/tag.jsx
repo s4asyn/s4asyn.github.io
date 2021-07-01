@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 
 import { Layout, BlogCard, BookCard } from '#components';
 
-export default ({ data, pageContext }) => {
+export default function tag({ data, pageContext }) {
     const SeoData = {
         title: `فهرست مطالب دارای برچسب "${pageContext.tag}"`,
         description: `تعداد نتایج: ${data.blog.totalCount}`,
@@ -32,7 +32,7 @@ export default ({ data, pageContext }) => {
             </article>
         </Layout>
     );
-};
+}
 
 export const query = graphql`
     query($tag: String!) {

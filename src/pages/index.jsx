@@ -2,16 +2,16 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 
 import { Layout, SocialLinks } from '#components';
-import MainStyle from '#components/main/main.module.css';
+import { mainStyle } from '#components/main/main.module.css';
 
-export default ({ data }) => {
+export default function index({ data }) {
     const SeoData = {
         description: 'صفحه‌ی خانگی',
         title: 'سعید عصائیان',
     };
     return (
         <Layout SeoData={SeoData} justSeo={true}>
-            <div className={MainStyle.MainStyle}>
+            <div className={mainStyle}>
                 <header className="flex flex-col justify-center w-full h-screen border border-black">
                     <h1 className="text-4xl font-bold text-center text-primary">
                         <Link to="/about">{SeoData.title}</Link>
@@ -31,7 +31,7 @@ export default ({ data }) => {
             </div>
         </Layout>
     );
-};
+}
 
 export const query = graphql`
     query {

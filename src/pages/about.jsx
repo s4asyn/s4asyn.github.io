@@ -7,7 +7,7 @@ const SeoData = {
     title: 'درباره‌ی من',
 };
 
-export default () => {
+export default function about() {
     return (
         <Layout SeoData={SeoData}>
             <article>
@@ -35,4 +35,4 @@ export default () => {
             </article>
         </Layout>
     );
-};
+}

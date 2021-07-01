@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 
 import { Layout, BlogCard } from '#components';
 
-export default ({ data }) => {
+export default function blogIndex({ data }) {
     const SeoData = {
         title: `فهرست مطالب وبلاگ`,
         description: `تعداد مطلب: ${data.allMdx.totalCount}`,
@@ -19,7 +19,7 @@ export default ({ data }) => {
             </article>
         </Layout>
     );
-};
+}
 
 export const query = graphql`
     query($lang: String!) {
