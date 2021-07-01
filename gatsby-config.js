@@ -20,6 +20,10 @@ module.exports = {
             options: {
                 name: `contents`,
                 path: `${__dirname}/contents/`,
+                ignore: [
+                    `**/\.*`,
+                    `**/*\.{tex,log,syncaux,fls,fdb_latexmk,synctex.gz,pdf}`,
+                ],
             },
         },
         `gatsby-plugin-sharp`,
@@ -61,16 +65,12 @@ module.exports = {
             options: {
                 postCssPlugins: [
                     require(`postcss-import`)({
-                        plugins: [
-                            require('stylelint'),
-                        ],
+                        plugins: [require('stylelint')],
                     }),
                     require(`tailwindcss`)(`./tailwind.config.js`),
                     require('postcss-nested'),
                     ...(process.env.NODE_ENV === 'production'
-                        ? [
-                            require('autoprefixer')
-                        ]
+                        ? [require('autoprefixer')]
                         : []),
                     require('postcss-reporter')({
                         clearReportedMessages: true,
