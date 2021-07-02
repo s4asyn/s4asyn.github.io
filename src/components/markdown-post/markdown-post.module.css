@@ -185,6 +185,9 @@
     }
 
     /* prismjs: end */
+    summary {
+        @apply text-blue-400;
+    }
 }
 
 /*! purgecss end ignore */

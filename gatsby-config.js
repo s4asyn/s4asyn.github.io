@@ -22,7 +22,7 @@ module.exports = {
                 path: `${__dirname}/contents/`,
                 ignore: [
                     `**/\.*`,
-                    `**/*\.{tex,log,syncaux,fls,fdb_latexmk,synctex.gz,pdf}`,
+                    `**/*\.{tex,log,aux,syntex,synctex,synctex\(busy\),syncaux,fls,fdb_latexmk,synctex.gz,pdf}`,
                 ],
             },
         },
